@@ -1,0 +1,29 @@
+#Layout {
+    width: 100vw;
+    min-width: 320px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 864px 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        ". content .";
+
+    // medium
+    @media only screen and (max-width: 1079px) {
+        grid-template-columns: 1fr 8fr 1fr;
+        grid-template-areas:
+        ". content .";
+    }
+
+    // small
+    @media only screen and (max-width: 719px) {
+        grid-template-columns: auto;
+        grid-template-areas:
+        "content";
+    }
+    @media only screen and (max-aspect-ratio: '2/3') {
+        grid-template-columns: auto;
+        grid-template-areas:
+        "content";
+    }
+}
