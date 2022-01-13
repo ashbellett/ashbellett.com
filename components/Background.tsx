@@ -1,7 +1,11 @@
 import Particles from 'react-tsparticles';
 import styles from '../styles/Background.module.scss';
 
-const Background = (): JSX.Element => {
+type BackgroundProps = {
+  mobile: boolean;
+};
+
+const Background = ({ mobile }: BackgroundProps): JSX.Element => {
   return (
     <Particles
       id={styles.Background}
@@ -19,8 +23,8 @@ const Background = (): JSX.Element => {
           links: {
             color: '#474b5e',
             enable: true,
-            distance: 120,
-            opacity: 0.5,
+            distance: mobile ? 80 : 120,
+            opacity: 1,
             width: 4
           },
           number: {
@@ -28,7 +32,7 @@ const Background = (): JSX.Element => {
               enable: true,
               area: 800
             },
-            value: 60
+            value: mobile ? 80 : 60
           },
           size: {
             value: 4
@@ -48,7 +52,7 @@ const Background = (): JSX.Element => {
             straight: false
           },
           opacity: {
-            value: 0.5
+            value: 1
           }
         },
         interactivity: {
