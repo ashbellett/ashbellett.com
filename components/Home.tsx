@@ -25,19 +25,19 @@ const Home = ({ mobile }: HomeProps): JSX.Element => {
         href="https://youtube.com/channel/UCSirULWi2TjJaPh3qmFLKTA"
         target="_blank"
       >
-        <Icon name="youtube" size={mobile ? 'big' : 'huge'} />
+        <Icon name="youtube" size={mobile ? 'large' : 'huge'} />
       </a>
       <a href="https://linkedin.com/in/ashbellett/" target="_blank">
-        <Icon name="linkedin" size={mobile ? 'big' : 'huge'} />
+        <Icon name="linkedin" size={mobile ? 'large' : 'huge'} />
       </a>
       <a href="https://twitter.com/ashbellett" target="_blank">
-        <Icon name="twitter" size={mobile ? 'big' : 'huge'} />
+        <Icon name="twitter" size={mobile ? 'large' : 'huge'} />
       </a>
       <a href="https://github.com/ashbellett" target="_blank">
-        <Icon name="github" size={mobile ? 'big' : 'huge'} />
+        <Icon name="github" size={mobile ? 'large' : 'huge'} />
       </a>
       <a href="https://ashbellett.medium.com/" target="_blank">
-        <Icon name="medium" size={mobile ? 'big' : 'huge'} />
+        <Icon name="medium" size={mobile ? 'large' : 'huge'} />
       </a>
     </div>
   );

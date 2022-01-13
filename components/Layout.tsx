@@ -17,23 +17,13 @@ const Layout = ({ title, page }: LayoutProps): JSX.Element => {
   //   minAspectRatio: '2/3'
   // });
   const isMobile = useMediaQuery({ maxWidth: 719 });
-  const isBigMobile = useMediaQuery({ maxAspectRatio: '3/4' });
+  const isBigMobile = useMediaQuery({ maxAspectRatio: '2/3' });
   const mobile = isMobile || isBigMobile;
 
   return (
     <>
       <Head>
         <title>{title}</title>
-        <meta charSet="utf-8" />
-        <meta
-          name="viewport"
-          content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=0"
-        />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <div id={styles.Layout}>
         <Background mobile={mobile} />
