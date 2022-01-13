@@ -10,12 +10,6 @@ type LayoutProps = {
 };
 
 const Layout = ({ title, page }: LayoutProps): JSX.Element => {
-  // const isDesktop = useMediaQuery({ minWidth: 1080, minAspectRatio: '2/3' });
-  // const isTablet = useMediaQuery({
-  //   minWidth: 720,
-  //   maxWidth: 1079,
-  //   minAspectRatio: '2/3'
-  // });
   const isMobile = useMediaQuery({ maxWidth: 719 });
   const isBigMobile = useMediaQuery({ maxAspectRatio: '2/3' });
   const mobile = isMobile || isBigMobile;
