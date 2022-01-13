@@ -83,4 +83,9 @@ const Background = ({ mobile }: BackgroundProps): JSX.Element => {
   );
 };
 
+Background.getInitialProps = () => {
+  const mobile = true;
+  return { mobile };
+};
+
 export default Background;

@@ -20,7 +20,8 @@ const Content = ({ page, mobile }: ContentProps): JSX.Element => {
 
 Content.getInitialProps = () => {
   const page = 'home';
-  return { page };
+  const mobile = true;
+  return { page, mobile };
 };
 
 export default Content;

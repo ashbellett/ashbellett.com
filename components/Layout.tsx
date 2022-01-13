@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { useMediaQuery } from 'react-responsive';
 import Background from './Background';
@@ -14,14 +15,20 @@ const Layout = ({ title, page }: LayoutProps): JSX.Element => {
   const isBigMobile = useMediaQuery({ maxAspectRatio: '2/3' });
   const mobile = isMobile || isBigMobile;
 
+  const [mobileState, setMobileState] = useState(true);
+
+  useEffect(() => {
+    setMobileState(mobile);
+  }, [mobile]);
+
   return (
     <>
       <Head>
         <title>{title}</title>
       </Head>
       <div id={styles.Layout}>
-        <Background mobile={mobile} />
-        <Content page={page} mobile={mobile} />
+        <Background mobile={mobileState} />
+        <Content page={page} mobile={mobileState} />
       </div>
     </>
   );

@@ -6,6 +6,7 @@ type HomeProps = {
 };
 
 const Home = ({ mobile }: HomeProps): JSX.Element => {
+  console.log(mobile);
   return (
     <div id={styles.Home}>
       <Image
@@ -41,6 +42,11 @@ const Home = ({ mobile }: HomeProps): JSX.Element => {
       </a>
     </div>
   );
+};
+
+Home.getInitialProps = () => {
+  const mobile = true;
+  return { mobile };
 };
 
 export default Home;
