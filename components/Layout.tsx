@@ -33,9 +33,9 @@ const Layout = ({ title, page }: LayoutProps): JSX.Element => {
       </Head>
       <div id={styles.Layout}>
         <Background />
-        {isDesktop && <Content page={page} />}
-        {isTablet && <Content page={page} />}
-        {(isMobile || isBigMobile) && <Content page={page} />}
+        {isDesktop && <Content page={page} mobile={false} />}
+        {isTablet && <Content page={page} mobile={false} />}
+        {(isMobile || isBigMobile) && <Content page={page} mobile={true} />}
       </div>
     </>
   );

@@ -3,12 +3,13 @@ import styles from '../styles/Content.module.scss';
 
 type ContentProps = {
   page: string;
+  mobile: boolean;
 };
 
-const Content = ({ page }: ContentProps): JSX.Element => {
+const Content = ({ page, mobile }: ContentProps): JSX.Element => {
   const renderSelection = () => {
     if (page === 'home') {
-      return <Home />;
+      return <Home mobile={mobile} />;
     } else {
       return;
     }

@@ -1,18 +1,22 @@
 import { Icon, Image } from 'semantic-ui-react';
 import styles from '../styles/Home.module.scss';
 
-const Home = (): JSX.Element => {
+type HomeProps = {
+  mobile: boolean;
+};
+
+const Home = ({ mobile }: HomeProps): JSX.Element => {
   return (
     <div id={styles.Home}>
       <Image
         src="ash.png"
-        size="medium"
+        size={mobile ? 'small' : 'medium'}
         alt="Profile picture"
         centered
         circular
       />
-      <h1>Ash Bellett</h1>
-      <p>
+      <h1 id={mobile ? styles.MobileTitle : styles.Title}>Ash Bellett</h1>
+      <p id={mobile ? styles.MobileSubtitle : styles.Subtitle}>
         I'm a <span id={styles.DataScientist}>data scientist</span> and{' '}
         <span id={styles.SoftwareEngineer}>software engineer</span> in{' '}
         <span id={styles.MelbourneAustralia}>Melbourne, Australia</span>.
@@ -21,19 +25,19 @@ const Home = (): JSX.Element => {
         href="https://youtube.com/channel/UCSirULWi2TjJaPh3qmFLKTA"
         target="_blank"
       >
-        <Icon name="youtube" size="huge" />
+        <Icon name="youtube" size={mobile ? 'large' : 'huge'} />
       </a>
       <a href="https://linkedin.com/in/ashbellett/" target="_blank">
-        <Icon name="linkedin" size="huge" />
+        <Icon name="linkedin" size={mobile ? 'large' : 'huge'} />
       </a>
       <a href="https://twitter.com/ashbellett" target="_blank">
-        <Icon name="twitter" size="huge" />
+        <Icon name="twitter" size={mobile ? 'large' : 'huge'} />
       </a>
       <a href="https://github.com/ashbellett" target="_blank">
-        <Icon name="github" size="huge" />
+        <Icon name="github" size={mobile ? 'large' : 'huge'} />
       </a>
       <a href="https://ashbellett.medium.com/" target="_blank">
-        <Icon name="medium" size="huge" />
+        <Icon name="medium" size={mobile ? 'large' : 'huge'} />
       </a>
     </div>
   );
