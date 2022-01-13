@@ -43,8 +43,4 @@ const Home = ({ mobile }: HomeProps): JSX.Element => {
   );
 };
 
-Home.getInitialProps = () => {
-  return {};
-};
-
 export default Home;

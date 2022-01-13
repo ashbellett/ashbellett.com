@@ -83,8 +83,4 @@ const Background = ({ mobile }: BackgroundProps): JSX.Element => {
   );
 };
 
-Background.getInitialProps = () => {
-  return {};
-};
-
 export default Background;
